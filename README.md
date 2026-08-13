@@ -56,7 +56,8 @@ The dashboard downloads classification, mandatory-15, task/event and sensitive-r
 - Unseen language can be uncertain.
 
 ## AI-tool usage declaration
-AI development assistance was used for architecture discussion, code review/brainstorming, debugging support and documentation assistance. Runtime processing is local and uses open-source Python libraries plus custom logic. Raw assignment messages were not sent to external AI services.
+
+AI tools were used during development for brainstorming, architecture discussion, debugging assistance, code review, and documentation support. The implementation was reviewed and tested locally, and the final system uses custom logic and open-source Python libraries for runtime processing. Raw assignment messages were not sent to external AI services.
 
 ## Public GitHub checklist
 Do NOT commit:
