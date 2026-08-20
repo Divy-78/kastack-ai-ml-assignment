@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # L1 dataset
 data/messages.csv
 data/mandatory_demo_ids.csv
@@ -18,3 +19,11 @@ outputs/
 # IDE
 .vscode/
 .idea/
+=======
+data/messages.csv
+data/mandatory_demo_ids.csv
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+outputs/
+>>>>>>> 61b4bc759b086f6c3389a31b47d0657414023176
