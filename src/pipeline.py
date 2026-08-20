@@ -13,7 +13,6 @@ CATEGORIES = [
 ]
 
 SENSITIVE_PATTERNS = [
-<<<<<<< HEAD
     ("password", re.compile(r"\b(?:temporary\s+)?password\s*[:=]?\s*(?:is\s+)?[^\s,.;]+(?:[-#][^\s,.;]+)*", re.I), "high", "do_not_store"),
     ("one_time_password", re.compile(r"\b(?:your\s+)?(?:fictional\s+)?OTP\s*(?:is|=|:)\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
     ("pin", re.compile(r"\bPIN\s*(?:is|=|:)\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
@@ -28,31 +27,12 @@ SENSITIVE_PATTERNS = [
     ("private_contact", re.compile(r"\bcall me on\s+[\d ]{7,}", re.I), "high", "do_not_store"),
     ("login_details", re.compile(r"\blogin details\b", re.I), "high", "do_not_send_external"),
     ("health_result", re.compile(r"\b(?:recent test result\s+says|private medical note\s+mentions)\s+[^.]+", re.I), "high", "do_not_store"),
-=======
-    ("password", re.compile(r"\bpassword\s*[:=]?\s*[^\s,.;]+(?:[-#][^\s,.;]+)*", re.I), "high", "do_not_store"),
-    ("one_time_password", re.compile(r"\b(?:your\s+)?OTP\s*(?:is|=|:)\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
-    ("pin", re.compile(r"\bPIN\s*(?:is|=|:)\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
-    ("card_number", re.compile(r"\b\d{4}(?:[ -]\d{4}){3}(?:[-]\d+)?\b"), "high", "do_not_store"),
-    ("bank_account", re.compile(r"\bbank account number\s*(?:is|=|:)?\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
-    ("account_recovery_code", re.compile(r"\baccount recovery code\s*(?:is|=|:)?\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
-    ("authentication_token", re.compile(r"\b(?:temporary access token|access token)\s*(?:is|=|:)?\s*[A-Za-z0-9_-]+", re.I), "high", "do_not_send_external"),
-    ("identification_number", re.compile(r"\bidentification number\s*(?:is|=|:)?\s*[A-Za-z0-9-]+", re.I), "high", "do_not_store"),
-    ("private_address", re.compile(r"\bhome address\s*(?:is|=|:)\s*[^.]+", re.I), "high", "do_not_store"),
-    ("private_contact", re.compile(r"\b(?:phone|mobile|contact)\s*(?:number|me on)?\s*(?:is|at|on)?\s*[+\d][\d ()-]{7,}", re.I), "high", "do_not_store"),
-    ("login_details", re.compile(r"\blogin details\b", re.I), "high", "do_not_send_external"),
-    ("health_result", re.compile(r"\brecent test result\s+says\s+[^.]+", re.I), "high", "do_not_store"),
->>>>>>> 61b4bc759b086f6c3389a31b47d0657414023176
 ]
 
 PROMO_RE = re.compile(r"discount|flash sale|premium plan|save\s*\d+%?|\d+%\s*off|limited[- ]time offer|free delivery|reward points|promo code", re.I)
 PERSONAL_RE = re.compile(r"emergency contact|favourite language|favorite language|prefer (?:morning|evening)|prefer receiving updates|drink coffee without sugar|i am vegetarian|i use dark mode|t-shirt size|usually study after dinner|live near|prefer (?:email|text|phone)", re.I)
-<<<<<<< HEAD
 EVENT_RE = re.compile(r"calendar update:|catch-up happens|orientation on|team stand-up|study-group session|client discussion is scheduled|product demo is scheduled|doctor appointment happens|AI workshop on|project review is scheduled|technical interview|design review at|college seminar at|sprint planning happens|are you available for the (?:design review|college seminar)|let us meet|meet sometime|has been moved to|has been cancelled|session is scheduled|latency-review meeting|meeting is scheduled", re.I)
 ACTION_RE = re.compile(r"please\s+(?:review|reply|join|confirm|complete|send|upload|submit|call|pay|renew|update|finish|prepare|check|note)|(?:i )?need you to|don['’]t forget|deadline is|is due on|before\s+20\d{2}-\d{2}-\d{2}|by\s+20\d{2}-\d{2}-\d{2}|could you send it soon|if possible, review the file before the meeting|please call|the deadline to\s+\S+|this is urgent|treat this as urgent|new task:|test the|has been extended|has been completed|any update on|any progress on|can you share an update|following up on|is it in progress|you can cancel|still needs attention|has .+ been handled|i am referring to|compare two|document privacy|create a|validate the|measure memory|update the architecture|prepare the", re.I)
-=======
-EVENT_RE = re.compile(r"calendar update:|catch-up happens|orientation on|team stand-up|study-group session|client discussion is scheduled|product demo is scheduled|doctor appointment happens|AI workshop on|project review is scheduled|technical interview|design review at|college seminar at|sprint planning happens|are you available for the (?:design review|college seminar)|let us meet|meet sometime", re.I)
-ACTION_RE = re.compile(r"please\s+(?:review|reply|join|confirm|complete|send|upload|submit|call|pay|renew|update|finish|prepare)|(?:i )?need you to|don['’]t forget|deadline is|is due on|before\s+20\d{2}-\d{2}-\d{2}|by\s+20\d{2}-\d{2}-\d{2}|could you send it soon|if possible, review the file before the meeting|please call", re.I)
->>>>>>> 61b4bc759b086f6c3389a31b47d0657414023176
 DATE_RE = re.compile(r"\b(20\d{2}-\d{2}-\d{2})\b")
 TIME_RE = re.compile(r"\b([01]?\d|2[0-3]):([0-5]\d)\b")
 PERSON_RE = re.compile(r"\b(?:Maya|Meera|Ishaan|Kabir|Aarav|Ananya|Neha|Tara|Rohan|Vikram)\b")
@@ -61,11 +41,7 @@ MASKS = {
     "password": "[PASSWORD_MASKED]", "one_time_password": "[OTP_MASKED]", "pin": "[PIN_MASKED]",
     "card_number": "[CARD_NUMBER_MASKED]", "bank_account": "[BANK_ACCOUNT_MASKED]",
     "account_recovery_code": "[RECOVERY_CODE_MASKED]", "authentication_token": "[TOKEN_MASKED]",
-<<<<<<< HEAD
     "identification_number": "[ID_NUMBER_MASKED]", "private_address": "[ADDRESS_MASKED]",
-=======
-    "identification_number": "[ID_NUMBER_MASKED]", "private_address": "home address [ADDRESS_MASKED]",
->>>>>>> 61b4bc759b086f6c3389a31b47d0657414023176
     "private_contact": "[CONTACT_MASKED]", "login_details": "[LOGIN_DETAILS_MASKED]",
     "health_result": "[HEALTH_RESULT_MASKED]"
 }
