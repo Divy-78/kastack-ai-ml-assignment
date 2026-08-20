@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # KaStack Message Intelligence — L2
 
 Local, security-first NLP system for the KaStack AI/ML Intern assignment.
@@ -146,13 +145,6 @@ Measured on the same machine in the same session for fair comparison.
 ---
 
 ## Six Required Categories
-=======
-# KaStack Message Intelligence
-
-Local, security-first NLP system for the KaStack AI/ML Intern assignment.
-
-## Six required categories
->>>>>>> 61b4bc759b086f6c3389a31b47d0657414023176
 - Action Required
 - Meeting or Event
 - Personal Information
